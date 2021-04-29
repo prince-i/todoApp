@@ -1,0 +1,53 @@
+1. npx create-react-app [app name]
+2. npm install materialize-css@next [inside client folder]
+3. import 'materialize-css/dist/css/materialize.min.css'; [App.js]
+4. import 'materialize-css/dist/js/materialize.min.js'; [App.js]
+5. import React from 'react'; [App.js]
+6. create server file outside the client folder 
+7. inside server file ===> npm install express cors
+                        ===> npm install nodemon
+8. Create server.js file 
+    8.1. write ==> const express = require('express');
+    8.2. write ==> const cors = require('cors');
+    8.3 create variable "app" declaring the express
+        8.3.1 ==> const app = express();
+        8.3.2 ==> use the cors()
+                ==> app.use(cors());
+    8.4. Indicate port
+        => app.listen(4000,()=>{
+            console.log('running on port 4000');
+        });
+9. Configure package.json file in server folder
+    9.1. add ==> "start": "nodemon server.js"
+
+10. Go to client folder 
+    10.1. cd client
+    10.2. npm install axios
+11. Code the backend of function in your designated js file.
+12. Using axios throw the data in server.js file
+13. Go to client folder
+    =>cd client 
+    =>npm install body-parser
+14. go to server.js 
+    14.1 declare body parser
+        => const bodyParser = require('body-parser');
+        => app.user(bodyParser.json())
+15. install mysql2 in server folder
+    => npm install mysql2
+
+16. create db.js file for mysql connection
+    ==> const mysql = require('mysql2');
+    ==> write the connection string
+        ==>const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'task_db'
+})
+
+module.exports = connection;
+
+
+17. declare connection in server.js
+
+18.
