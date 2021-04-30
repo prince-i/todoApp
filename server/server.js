@@ -28,7 +28,7 @@ app.post('/addTask',(req,res)=>{
 
 app.delete('/deleteTask/:id',(req,res)=>{
     // res.send('delete task')
-    console.log(req.params.id);
+    // console.log(req.params.id);
     const DELETE_QUERY = `DELETE FROM task_db.task WHERE (id=${req.params.id})`;
     connection.query(DELETE_QUERY, (err)=>{
         if(err) console.log(err,response)

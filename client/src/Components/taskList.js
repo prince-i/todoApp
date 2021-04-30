@@ -55,18 +55,18 @@ class TaskList extends React.Component{
 
                 
                 <div className="row">
-                    {this.state.taskList.map((task) => (
-                        <div className="col l4 m6 s12">
+                    {this.state.taskList.map((taskCont) => (
+                        <div className="col l4 m6 s12" key={taskCont.id}>
                         <div className="card">
                             <div className="card-content">
-                                <p>{task.tasks}</p>
+                                <p>{taskCont.tasks}</p>
                         </div>
                             <div className="card-action">
                             <button className="btn-small blue" onClick={
                                 ()=>this.onDoneClick()
                             }>Done</button>
                             <button className="btn-small red" onClick={
-                                ()=> this.onDeleteClick(task.id)
+                                ()=> this.onDeleteClick(taskCont.id)
                             }>Delete</button>
                             </div>
                         </div>
