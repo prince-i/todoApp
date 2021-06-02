@@ -50,4 +50,6 @@ module.exports = connection;
 
 17. declare connection in server.js
 
-18.
+18. code the query
+
+19. make sure to use key for unique identification.
