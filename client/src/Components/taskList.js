@@ -22,7 +22,7 @@ class TaskList extends React.Component{
         axios.post('http://localhost:4000/addTask',{
             task: this.state.task
         });
-        this.getTaskList();
+        setTimeout(this.getTaskList,400);
         this.setState({
             task:''
         });
@@ -35,11 +35,11 @@ class TaskList extends React.Component{
     onDeleteClick =(id)=>{
         // console.log('inside delete')
         axios.delete(`http://localhost:4000/deleteTask/${id}`);
-        this.getTaskList();
+        setTimeout(this.getTaskList,100);
     }
 
     render(){
-        console.log(this.state.taskList);
+        // console.log(this.state.taskList);
         return(
             <div className="row">
                 <div className="col s12">
